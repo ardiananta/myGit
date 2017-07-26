@@ -1,0 +1,35 @@
+<ion-view view-title="Profile">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/mmi4bWs.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-image: url('{{profile.avatar_url}}');"></div>
+                <h3><a class="dark">{{profile.name}}</a></h3>
+                <h4>{{profile.login}}</h4>
+            </div>
+        </div>
+        <table>
+          <tr>
+            <td width="20%" style="font-weight: bold">BIO</td>
+            <td width="1%">:</td>
+            <td style="padding-left:5px;padding-right:5px;text-align:justify">{{profile.bio}}</td>
+          </tr>
+          <tr>
+            <td width="20%" style="font-weight: bold">Company</td>
+            <td width="1%">:</td>
+            <td style="padding-left:5px;padding-right:5px;text-align:justify">{{profile.company}}</td>
+          </tr>
+          <tr>
+            <td width="20%" style="font-weight: bold">Location</td>
+            <td width="1%">:</td>
+            <td style="padding-left:5px;padding-right:5px;text-align:justify">{{profile.location}}</td>
+          </tr>
+          <tr>
+            <td width="20%" style="font-weight: bold">Blog</td>
+            <td width="1%">:</td>
+            <td style="padding-left:5px;padding-right:5px;text-align:justify">{{profile.blog}}</td>
+          </tr>
+        </table>
+        </div>
+            
+  </ion-content>
+</ion-view>

@@ -1,0 +1,35 @@
+<ion-view view-title="Followers">
+    <ion-content>
+        <div ng-controller="FollowerCtrl">
+            <ul>
+
+                <li ng-repeat="item in items |
+                        offset: currentPage*itemsPerPage |
+                        limitTo: itemsPerPage">
+                    <div class="card">
+                        <div class="item item-text-wrap" style="height:90px">
+                            <div class="profPic"><img width="50px" height="50px" src="{{item.avatar_url}}" /></div>
+                            <div class="profName">{{item.login}}</div>
+                        </div>
+                    </div>
+                </li>
+
+
+            </ul>
+
+            <div class="pagination pagination-centered">
+                <ul>
+                    <li ng-class="prevPageDisabled()">
+                        <a href ng-click="prevPage()">« Prev</a>
+                    </li>
+                    <li ng-repeat="n in range()" ng-class="{active: n == currentPage}" ng-click="setPage(n)">
+                        <a href="">{{n+1}}</a>
+                    </li>
+                    <li ng-class="nextPageDisabled()">
+                        <a href ng-click="nextPage()">Next »</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
